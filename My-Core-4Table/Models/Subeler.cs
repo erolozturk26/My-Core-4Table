@@ -8,7 +8,7 @@ namespace My_Core_4Table.Models
         [Key]
         public int ID { get; set; }
         [Required]//zorunlu
-        [StringLength(20)]//ad soy karakter sayısı
+        [StringLength(20)]//ad soy karakter sayısı Deneme
         [DisplayName("ŞUBE ADI")]
         public string ADI { get; set; } = "";
 
