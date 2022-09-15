@@ -1,0 +1,62 @@
+﻿@model My_Core_4Table.Models.Personeller
+
+@{
+    ViewData["Title"] = "Personel Kaldır";
+}
+@{
+    ViewData["Title2"] = "Personel";
+}
+
+
+
+<div align="center">
+    <table class="table table-bordered text-center" style="width:60%">
+    
+      <thead>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.ADSOYAD)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.ADSOYAD)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.YAS)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.YAS)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.CINSIYET)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.CINSIYET)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.TOPLAMCALISMA)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.TOPLAMCALISMA)
+            </td>
+        </tr>
+    </thead>
+</table>
+</div>
+
+<div align="center">
+        <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="KALDIR" class="btn btn-danger text-white" />
+        <a asp-action="Index" class="btn btn-warning">GERİ DÖN</a>
+    </form>
+  </div>

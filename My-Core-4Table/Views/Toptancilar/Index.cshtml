@@ -1,0 +1,59 @@
+﻿@model IEnumerable<My_Core_4Table.Models.Toptancilar>
+
+@{
+    ViewData["Title"] = "Toptancı Listeleme";
+}
+@{
+    ViewData["Title2"] = "Toptancı";
+}
+
+
+
+
+
+
+
+<table class="table table-bordered table-hover text-center">
+      <p>
+    <a asp-action="Create" class="btn btn-danger ms-2 mb-2 text-white">Yeni Toptancı Oluştur</a>
+      </p>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ADISOYADI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KONUMU)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TELEFONNO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOPLAMCALISMA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ADISOYADI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KONUMU)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TELEFONNO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOPLAMCALISMA)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-success text-white"><i class="fa fa-pencil"></i> DÜZENLE</a>
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger text-white"><i class="fa fa-trash"></i> KALDIR</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

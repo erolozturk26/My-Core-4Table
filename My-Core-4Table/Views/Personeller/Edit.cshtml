@@ -1,0 +1,47 @@
+﻿@model My_Core_4Table.Models.Personeller
+
+@{
+    ViewData["Title"] = "Personel Güncelleme";
+}
+@{
+    ViewData["Title2"] = "Personel";
+}
+
+<div align="center">
+    <div class="col-md-4 text-center">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="ADSOYAD" class="control-label"></label>
+                <input asp-for="ADSOYAD" class="form-control" />
+                <span asp-validation-for="ADSOYAD" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YAS" class="control-label"></label>
+                <input asp-for="YAS" class="form-control" />
+                <span asp-validation-for="YAS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CINSIYET" class="control-label"></label>
+                <input asp-for="CINSIYET" class="form-control" />
+                <span asp-validation-for="CINSIYET" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TOPLAMCALISMA" class="control-label"></label>
+                <input asp-for="TOPLAMCALISMA" class="form-control" />
+                <span asp-validation-for="TOPLAMCALISMA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="KAYDET" class="btn btn-primary" />
+            </div>
+            <div>
+    <a asp-action="Index" class="btn btn-warning">GERİ DÖN</a>
+</div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

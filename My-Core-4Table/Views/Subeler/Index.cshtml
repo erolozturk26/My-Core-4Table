@@ -1,0 +1,58 @@
+﻿@model IEnumerable<My_Core_4Table.Models.Subeler>
+
+@{
+    ViewData["Title"] = "Şube Listeleme";
+}
+
+@{
+    ViewData["Title2"] = "Şube";
+}
+
+
+
+
+
+<table class="table table-bordered table-hover text-center">
+      <p>
+    <a asp-action="Create" class="btn btn-danger ms-2 mb-2 text-white">Yeni Şube Oluştur</a>
+      </p>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ADI)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KONUM)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YILLIKCIRO)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TOPLAMCALISAN)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ADI)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KONUM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YILLIKCIRO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TOPLAMCALISAN)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID" class="btn btn-success text-white"><i class="fa fa-pencil"></i> DÜZENLE</a>
+                <a asp-action="Delete" asp-route-id="@item.ID" class="btn btn-danger text-white"><i class="fa fa-trash"></i> KALDIR</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

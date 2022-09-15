@@ -1,0 +1,60 @@
+﻿@model My_Core_4Table.Models.Subeler
+
+@{
+    ViewData["Title"] = "Şube Kaldır";
+}
+@{
+    ViewData["Title2"] = "Şube";
+}
+
+<div align="center">
+    <table class="table table-bordered text-center" style="width:60%">
+    
+      <thead>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.ADI)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.ADI)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.KONUM)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.KONUM)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.YILLIKCIRO)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.YILLIKCIRO)
+            </td>
+        </tr>
+        <tr>
+            <th class="text-danger">
+                <b>
+                   @Html.DisplayNameFor(model => model.TOPLAMCALISAN)                </b>
+            </th>
+            <td>
+                @Html.DisplayFor(model => model.TOPLAMCALISAN)
+            </td>
+        </tr>
+    </thead>
+</table>
+</div>
+
+<div align="center">
+        <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="KALDIR" class="btn btn-danger text-white" />
+        <a asp-action="Index" class="btn btn-warning">GERİ DÖN</a>
+    </form>
+  </div>
