@@ -9,7 +9,7 @@ namespace My_Core_4Table.Models
         public int ID { get; set; }
 
         [DisplayName("ADI SOYADI")]
-        public string ADSOYAD { get; set; } = "";
+        public string ADSOYAD { get; set; } = ""; //Adı Soyadı
 
         [DisplayName("YAŞ")]
         public int YAS { get; set; }
