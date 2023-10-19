@@ -2,6 +2,8 @@
  ```javascript
  PROJE EKRAN GÖRÜNTÜLERİ
   ```
+  ## Proje Detayları
+  - ASP.NET CORE ile Entity Framework Core ile CodeFirst yapısında tema giydirilmiş web sitesi.
 
   ![](https://github.com/erolozturk26/My-Core-4Table/blob/master/Ekran%20G%C3%B6r%C3%BCnt%C3%BCleri/Anasayfa.png)
   ![](https://github.com/erolozturk26/My-Core-4Table/blob/master/Ekran%20G%C3%B6r%C3%BCnt%C3%BCleri/AdminPanel-Urunler.png)
