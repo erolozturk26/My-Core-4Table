@@ -1,4 +1,4 @@
-# C# MVC Katmanlı 4 Tablolu Web Sitesi
+# C# .Net Core ile Entity Framework CodeFirst 4 Tablolu Web Sitesi
  ```javascript
  PROJE EKRAN GÖRÜNTÜLERİ
   ```
